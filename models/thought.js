@@ -1,28 +1,38 @@
-  const { Schema, model, Types } =requre('mongoose');
-  const moment = require('moment')
+// Import necessary modules from mongoose
+const { Schema, model, Types } = require('mongoose');
 
-  const reactionSchema = new Schema (
+// Import moment module to format timestamps
+const moment = require('moment')
+
+// Define the schema for reactions
+const reactionSchema = new Schema (
     {
-        reactionId: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId(),
-        },
-        reactionBody: {
-            type: String,
-            required: true,
-            maxlength:280
-        },
-        username: {
-            type: String,
-            required: true,
-        },
-        createdAt: {
-            type: Date,
-            default: Date.now,
-            get: createdAtVal => moment(createdAtVal).format("MMM DD, YYYY [at} hh:mm a")
-        },
+       // Unique ID for the reaction
+       reactionId: {
+        type: Schema.Types.ObjectId,
+        default: () => new Types.ObjectId(),
+       },
+       // Text of the reaction
+       reactionBody: {
+        type: String,
+        required: true,
+        maxlength: 280
+       },
+       // Username of the user who posted the reaction
+       username: {
+        type: String,
+        required: true,
+       },
+       // Timestamp for the creation of the reaction
+       createdAt: {
+        type: Date,
+        default: Date.now,
+        // Use moment to format the timestamp
+        get: createdAtVal => moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"),
+       },
     },
     {
+        // Enable getters for virtuals and id field
         toJSON: {
             virtuals: true,
             getters: true
@@ -30,26 +40,34 @@
         id: false,
     }
 )
+
+// Define the schema for thoughts
 const thoughtSchema = new Schema (
     {
-        thoughtText: {
-            type: String,
-            required: true,
-            minlength: 1, 
-            maxlength: 280,
-        },
-        createdAt: {
+      // Text of the thought
+      thoughtText: {
+        type: String,
+        required: true,
+        minlength: 1,
+        maxlength: 280,
+      },
+      // Timestamp for the creation of the thought
+      createdAt: {
         type: Date,
         default: Date.now,
+        // Use moment to format the timestamp
         get: createdAtVal => moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"),
       },
+      // Username of the user who posted the thought
       username: {
         type: String,
         required: true,
       },
+      // List of reactions to the thought
       reactions: [reactionSchema],
     },
     {
+        // Enable getters for virtuals and id field
         toJSON: {
             virtuals: true,
             getters: true,
@@ -58,12 +76,14 @@ const thoughtSchema = new Schema (
     }
 )
 
-// Total friend count
+// Virtual property to get the total count of reactions
 thoughtSchema.virtual('reactionCount')
 .get(function() {
     return this.reactions.length;
 })
 
-// user model by using the UserSchema
+// Create the Thought model using the thoughtSchema
 const Thought = model('Thought', thoughtSchema);
+
+// Export the Thought model
 module.exports = Thought;
