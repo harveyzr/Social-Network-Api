@@ -1,1 +1,100 @@
-# Social-Network-Api
+# SVG LOGO MAKER
+
+## Table of Contents
+
+ - [Description](#description)
+ - [User Story](#user-story)
+ - [Acceptance Criteria](#acceptance-criteria)
+ - [Technologies](#technologies)
+ - [Tests](#tests)
+ - [Images](#images)
+ - [Link To Recorded Video](#link-to-recorded-video)
+ - [Link to GitHub Pages ](#link-to-gethub-website)
+ - [Skills Used](#skills-used)
+
+ ## Description
+This API is designed for a social network web application that allows users to share their thoughts, react to friends' thoughts, and manage a friends list. Here’s a detailed breakdown of the technologies and functionalities involved:
+
+ Social-Network is the seven-tenth challenge for the Ohio State coding boot camp.
+-	My motivation for this project was to become proficient at coding backend with JavaScript, Express.js, Node.js, MongoDb, Mongoose, Insomnia, Moment.js.  
+-	Building this project allowed me to implement coding techniques that I have been studying for the 17 weeks. 
+-	This page was a perfect example of real-world practices and how to write backend code. 
+-	I learned how to code and test routes for a backend Social-Network.  
+
+ ## User Story
+- AS A social media startup
+- I WANT an API for my social network that uses a NoSQL database
+- SO THAT my website can handle large amounts of unstructured data
+ 
+ ## Acceptance Criteria
+- GIVEN a social network API
+- WHEN I enter the command to invoke the application
+- THEN my server is started and the Mongoose models are synced to the MongoDB database
+- WHEN I open API GET routes in Insomnia for users and thoughts
+- THEN the data for each of these routes is displayed in a formatted JSON
+- WHEN I test API POST, PUT, and DELETE routes in Insomnia
+- THEN I am able to successfully create, update, and delete users and thoughts in my database
+- WHEN I test API POST and DELETE routes in Insomnia
+- THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
+
+## Technologies 
+[Express.js](https://expressjs.com/)
+    - Routing: Express.js handles the routing for our API, directing HTTP requests to the appropriate handlers.
+    - Middleware: Utilizes middleware for parsing JSON, handling errors, and managing sessions/authentication.
+
+[MongoDB](https://www.mongodb.com/)
+   - Database: MongoDB serves as the database, storing information about users, thoughts, reactions, and friend lists.
+   -  NoSQL Database: Allows for flexible and scalable storage of JSON-like documents.
+
+[Mongoose](https://mongoosejs.com/)
+   - Object Data Modeling (ODM): Mongoose provides a straightforward, schema-based solution to model our application    data.
+   - Schema Definitions: Defines schemas for users, thoughts, and reactions, ensuring data consistency and integrity.
+   -  Validation and Middleware: Offers built-in validation and middleware support to enforce rules and perform actions before or after saving data.
+
+[Moment.js](https://www.npmjs.com/package/moment)
+   - Timestamp Formatting: Moment.js is used to format timestamps, providing readable and consistent date and time    formatting across the application.
+   - Date Manipulation: Simplifies date manipulation and formatting, making it easier to display human-readable timestamps.
+
+[Insomnia](https://insomnia.rest/)
+   - API Testing: Insomnia is utilized to test API endpoints and ensure they work correctly.
+   - Seed Data Creation: Facilitates the creation of seed data by sending HTTP requests to populate the database with initial data for testing and development.
+
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+[Node.js](https://nodejs.org/en/)
+
+## Tests
+Insomnia plays a crucial role in managing the user database for our social network web application. It is utilized for various operations, including adding, updating, and removing entities within the database. Here’s a breakdown of how Insomnia is employed:
+
+   **USER**
+   - Create a new user: `POST /api/users`
+   - Get all users: `GET /api/users`
+   - Get a single user by its `id`: `GET /api/users/:userId`
+   - Update a user by its `id`: `PUT /api/users/:userId`
+   - Delete a user by its `id`: `DELETE /api/user/:userId`
+
+   **THOUGHT**
+   - Create a new thought: `POST /api/thoughts/`
+   - Get all thoughts: `GET /api/thoughts/`
+   - Get a single thought by its `id`: `GET /api/thoughts/:thoughtId`
+   - Update a thought by its `id`: `PUT /api/thoughts/:thoughtId`
+   - Delete a thought by its `id`: `DELETE /api/thoughts/:thoughtId`
+
+   **REACTION**
+   -
+
+ ## Images
+![Website Preview](images/SVG%20LOGO.gif)
+ 
+ ## Link to recorded video
+https://drive.google.com/file/d/1zHBGxxRS2y0OuaxyxuogzqORzyDLDJNw/view
+ 
+## Link to GetHub Website
+https://github.com/harveyzr/SVG-LOGO-MAKER
+
+
+ ## Skills Used
+- node 
+- inquirer
+- Jest
+
