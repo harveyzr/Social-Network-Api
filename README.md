@@ -8,7 +8,7 @@
  - [Technologies](#technologies)
  - [Tests](#tests)
  - [Images](#images)
- - [Link To Recorded Video](#link-to-recorded-video)
+ - [Link To Recorded Video](#link-to-recorded-videos)
  - [Link to GitHub Pages ](#link-to-gethub-website)
  - [Skills Used](#skills-used)
 
@@ -85,14 +85,14 @@ Insomnia plays a crucial role in managing the user database for our social netwo
    - Delete a reaction by the `reactionId`: `DEL /api/thoughts/:thoughtId/reactions/:reactionId`
 
  ## Images
-![Website Preview](images/SVG%20LOGO.gif)
+![Website Preview](public/assets/img/Social%20Api.gif)
  
- ## Link to recorded video
-https://www.loom.com/share/2e998435c90441caa3a8c48f17949711?sid=b954204d-4c99-432e-8574-9de211fc47ec
+ ## Link to recorded videos
+[Part 1](https://www.loom.com/share/2e998435c90441caa3a8c48f17949711?sid=b954204d-4c99-432e-8574-9de211fc47ec)
 
-https://www.loom.com/share/f2376b3e73124e8baabbb3b1a77c5f22?sid=89a4ba28-b8af-4251-b7c6-2c34c388e111
+[part 2](https://www.loom.com/share/f2376b3e73124e8baabbb3b1a77c5f22?sid=89a4ba28-b8af-4251-b7c6-2c34c388e111)
 
-https://www.loom.com/share/e36b8c752b8d432bbb326d71ccd6ac0c?sid=7ee6191d-4366-48b0-91d4-35eacdb74600
+[part 3](https://www.loom.com/share/e36b8c752b8d432bbb326d71ccd6ac0c?sid=7ee6191d-4366-48b0-91d4-35eacdb74600)
  
 ## Link to GetHub Website
 https://github.com/harveyzr/SVG-LOGO-MAKER
@@ -100,6 +100,8 @@ https://github.com/harveyzr/SVG-LOGO-MAKER
 
  ## Skills Used
 - node 
-- inquirer
-- Jest
-
+- JavaScript
+- Insomnia
+- Mongoose
+- MogoDB
+- Express.js
