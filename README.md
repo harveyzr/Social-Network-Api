@@ -1,4 +1,4 @@
-# SVG LOGO MAKER
+# Social-Network-Api
 
 ## Table of Contents
 
@@ -81,13 +81,18 @@ Insomnia plays a crucial role in managing the user database for our social netwo
    - Delete a thought by its `id`: `DELETE /api/thoughts/:thoughtId`
 
    **REACTION**
-   -
+   - Create a reaction: `POST /api/thoughts/:thoughtId/reactions`
+   - Delete a reaction by the `reactionId`: `DEL /api/thoughts/:thoughtId/reactions/:reactionId`
 
  ## Images
 ![Website Preview](images/SVG%20LOGO.gif)
  
  ## Link to recorded video
-https://drive.google.com/file/d/1zHBGxxRS2y0OuaxyxuogzqORzyDLDJNw/view
+https://www.loom.com/share/2e998435c90441caa3a8c48f17949711?sid=b954204d-4c99-432e-8574-9de211fc47ec
+
+https://www.loom.com/share/f2376b3e73124e8baabbb3b1a77c5f22?sid=89a4ba28-b8af-4251-b7c6-2c34c388e111
+
+https://www.loom.com/share/e36b8c752b8d432bbb326d71ccd6ac0c?sid=7ee6191d-4366-48b0-91d4-35eacdb74600
  
 ## Link to GetHub Website
 https://github.com/harveyzr/SVG-LOGO-MAKER

@@ -28,12 +28,12 @@ router.route('/:thoughtId')
 // Define a route for the path '/:thoughtId/reactions'. This route will respond to POST requests.
 // POST requests will add a new reaction to a thought.
 router.route('/:thoughtId/reactions')
-.post(addThought);
+.post(addReaction);
 
 // Define a route for the path '/:thoughtId/reactions/:reactionId'. This route will respond to DELETE requests.
 // DELETE requests will remove a reaction by its ID.
 router.route('/:thoughtId/reactions/:reactionId')
-.delete(removeThought);
+.delete(removeReaction);
 
 // Export the router to be used in other parts of the application
 module.exports = router;
