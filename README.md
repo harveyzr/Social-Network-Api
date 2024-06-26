@@ -95,7 +95,7 @@ Insomnia plays a crucial role in managing the user database for our social netwo
 [part 3](https://www.loom.com/share/e36b8c752b8d432bbb326d71ccd6ac0c?sid=7ee6191d-4366-48b0-91d4-35eacdb74600)
  
 ## Link to GetHub Website
-https://github.com/harveyzr/SVG-LOGO-MAKER
+https://github.com/harveyzr/Social-Network-Api
 
 
  ## Skills Used
